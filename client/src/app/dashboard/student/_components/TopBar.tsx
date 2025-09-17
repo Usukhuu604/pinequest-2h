@@ -1,6 +1,15 @@
+"use client";
+
 import { Bell } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { LogOut } from "lucide-react";
 
 const TopBar = () => {
+  const router = useRouter();
+
+  const handleLogout = () => {
+    router.push("/");
+  };
   return (
     <div className="bg-white border-b border-gray-200 px-6 py-4">
       <div className="flex items-center justify-between">
@@ -19,9 +28,17 @@ const TopBar = () => {
               <span className="text-white text-sm font-semibold">UU</span>
             </div>
             <div>
-              <p className="text-sm font-medium text-gray-800">Unknown Unknown</p>
+              <p className="text-sm font-medium text-gray-800">
+                Unknown Unknown
+              </p>
               <p className="text-xs text-gray-500">Grade 11 • Highschool</p>
             </div>
+            <button
+              onClick={handleLogout}
+              className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg"
+            >
+              <LogOut className="w-4 h-4" />
+            </button>
           </div>
         </div>
       </div>

@@ -1,0 +1,18 @@
+mutation CreateStudentMessage($input: CreateStudentMessageInput!) {
+  createStudentMessage(input: $input) {
+    id
+    content
+    authorId
+    authorName
+    isAnonymous
+    timestamp
+    status
+    responses {
+      id
+      content
+      therapistId
+      therapistName
+      timestamp
+    }
+  }
+}

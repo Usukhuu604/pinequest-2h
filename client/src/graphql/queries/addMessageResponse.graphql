@@ -1,0 +1,18 @@
+mutation AddMessageResponse($input: AddMessageResponseInput!) {
+  addMessageResponse(input: $input) {
+    id
+    content
+    authorId
+    authorName
+    isAnonymous
+    timestamp
+    status
+    responses {
+      id
+      content
+      therapistId
+      therapistName
+      timestamp
+    }
+  }
+}

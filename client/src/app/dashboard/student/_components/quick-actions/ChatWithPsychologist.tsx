@@ -2,17 +2,17 @@
 
 import { MessageCircle } from "lucide-react";
 import { useState } from "react";
-import Chat from "../Chat";
+import MessageBoard from "../MessageBoard";
 
 const ChatWithPsychologist = () => {
-  const [showChat, setShowChat] = useState(false);
+  const [showMessageBoard, setShowMessageBoard] = useState(false);
 
   const handleClick = () => {
-    setShowChat(true);
+    setShowMessageBoard(true);
   };
 
-  const handleCloseChat = () => {
-    setShowChat(false);
+  const handleCloseMessageBoard = () => {
+    setShowMessageBoard(false);
   };
 
   return (
@@ -22,15 +22,18 @@ const ChatWithPsychologist = () => {
         className="cursor-pointer p-4 rounded-xl text-white bg-blue-500 hover:opacity-90 flex flex-col items-start w-full"
       >
         <MessageCircle className="w-6 h-6 mb-2" />
-        <span className="font-medium">Сэтгэлзүйчтэй чатлах</span>
+        <span className="font-medium">Сэтгэлзүйчид мессеж илгээх</span>
+        <span className="text-xs text-blue-100 mt-1">
+          Та асуултаа бичээд хариулт хүлээнэ үү
+        </span>
       </button>
 
-      {showChat && (
-        <Chat
-          userId="student_123" // In production, get this from auth/context
-          userName="Оюутан" // In production, get this from auth/context
-          userRole="student"
-          onClose={handleCloseChat}
+      {showMessageBoard && (
+        <MessageBoard
+          userId="student_123"
+          userName="Сурагч"
+          isAnonymous={false}
+          onClose={handleCloseMessageBoard}
         />
       )}
     </>

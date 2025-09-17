@@ -1,0 +1,18 @@
+query GetStudentMessages($status: MessageStatus) {
+  studentMessages(status: $status) {
+    id
+    content
+    authorId
+    authorName
+    isAnonymous
+    timestamp
+    status
+    responses {
+      id
+      content
+      therapistId
+      therapistName
+      timestamp
+    }
+  }
+}

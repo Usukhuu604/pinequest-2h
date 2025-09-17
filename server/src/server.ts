@@ -109,6 +109,15 @@ async function startServer() {
       }
     });
 
+    // Handle typing indicators
+    socket.on('typing', ({ roomId, isTyping }: { roomId: string; isTyping: boolean }) => {
+      const user = activeUsers.get(socket.id);
+      if (user && roomId) {
+        // Send typing indicator to other users in the room
+        socket.to(roomId).emit('userTyping', { isTyping, userId: user.id });
+      }
+    });
+
     // Handle disconnect
     socket.on('disconnect', () => {
       // console.log('User disconnected:', socket.id);
