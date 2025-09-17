@@ -12,7 +12,7 @@ export const CurrentMentalCondition = () => {
   };
 
   return (
-    <div className="max-w-[600px] mx-auto mt-10 bg-white rounded-2xl shadow-lg p-6">
+    <div className="max-w-[600px] mx-auto mt-10  bg-white rounded-2xl shadow-lg p-6">
       {step === "welcome" && <MoodSelector onSelect={handleWelcomeNext} />}
       {step === "auth" && <LoginSignupPrompt />}
     </div>
