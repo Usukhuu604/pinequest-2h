@@ -100,7 +100,6 @@ const MessageBoard = ({
               id="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-<<<<<<< Updated upstream
               placeholder={
                 isAnonymous
                   ? "🔒 Нэргүй мессежээ бичээрэй... Та юу ч асууж, санаа бодлоо хуваалцаж болно! 😊"
@@ -112,11 +111,6 @@ const MessageBoard = ({
                   : "border-gray-300 focus:ring-blue-500"
               }`}
               maxLength={1000}
-=======
-              placeholder="Type your message here..."
-              className="w-full h-32 resize-none p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              maxLength={500}
->>>>>>> Stashed changes
               disabled={isSubmitting}
             />
             <div className="text-xs text-gray-500 mt-1">
