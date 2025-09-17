@@ -1,0 +1,8 @@
+query GetTherapists {
+  therapists {
+    id
+    name
+    specialization
+    isAvailable
+  }
+}

@@ -1,0 +1,12 @@
+query GetAppointments($psychologistId: ID!) {
+  appointments(psychologistId: $psychologistId) {
+    id
+    student {
+      id
+      name
+    }
+    date
+    status
+    createdAt
+  }
+}

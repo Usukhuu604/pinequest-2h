@@ -1,0 +1,25 @@
+mutation CreateAppointment(
+  $studentId: ID!
+  $psychologistId: ID!
+  $date: String!
+) {
+  createAppointment(
+    studentId: $studentId
+    psychologistId: $psychologistId
+    date: $date
+  ) {
+    id
+    student {
+      id
+      name
+    }
+    psychologist {
+      id
+      name
+      specialization
+    }
+    date
+    status
+    createdAt
+  }
+}

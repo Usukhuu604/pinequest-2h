@@ -1,0 +1,13 @@
+query GetStudentAppointments($studentId: ID!) {
+  studentAppointments(studentId: $studentId) {
+    id
+    psychologist {
+      id
+      name
+      specialization
+    }
+    date
+    status
+    createdAt
+  }
+}

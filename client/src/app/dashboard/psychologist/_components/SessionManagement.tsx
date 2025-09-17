@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Calendar, X, Clock, User, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SessionChat from "../../_components/SessionChat";
-
+import { Bell } from "lucide-react";
 interface SessionRequest {
   id: string;
   studentName: string;
@@ -111,8 +111,9 @@ const SessionManagement = () => {
       {/* Pending Requests */}
       <div className="bg-white rounded-lg shadow-sm border">
         <div className="p-4 border-b">
-          <h2 className="text-lg font-semibold">
-            🔔 Шинэ хүсэлтүүд ({pendingRequests.length})
+          <h2 className="text-lg font-semibold flex">
+            <Bell className="size-6 mr-3" /> Шинэ хүсэлтүүд (
+            {pendingRequests.length})
           </h2>
         </div>
         <div className="p-4 space-y-4">
