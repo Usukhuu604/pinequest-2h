@@ -23,9 +23,6 @@ const AnonymousQuestion = () => {
       >
         <HelpCircle className="w-6 h-6 mb-2" />
         <span className="font-medium">Нэрээ нууцлан мессеж илгээх</span>
-        <span className="text-xs text-purple-100 mt-1">
-          Таны хувийн мэдээлэл нууцлагдсан
-        </span>
       </button>
 
       {showMessageBoard && (

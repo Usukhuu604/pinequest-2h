@@ -1,0 +1,16 @@
+mutation UpdateAppointmentStatus($id: ID!, $status: String!) {
+  updateAppointmentStatus(id: $id, status: $status) {
+    id
+    student {
+      id
+      name
+    }
+    psychologist {
+      id
+      name
+    }
+    date
+    status
+    createdAt
+  }
+}

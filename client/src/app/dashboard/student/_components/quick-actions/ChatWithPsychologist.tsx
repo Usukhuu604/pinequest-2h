@@ -23,9 +23,6 @@ const ChatWithPsychologist = () => {
       >
         <MessageCircle className="w-6 h-6 mb-2" />
         <span className="font-medium">Сэтгэлзүйчид мессеж илгээх</span>
-        <span className="text-xs text-blue-100 mt-1">
-          Та асуултаа бичээд хариулт хүлээнэ үү
-        </span>
       </button>
 
       {showMessageBoard && (
